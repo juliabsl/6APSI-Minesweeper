@@ -20,9 +20,6 @@ function shuffle(array) {
   return arr;
 }
 
-// function TryAgain(props) {
-//   return ();
-// }
 
 function App() {
   const [items, setItems] = useState(Array.from({ length: 36 }, (_, i) => i + 1));
