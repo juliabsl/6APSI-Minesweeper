@@ -1,68 +1,104 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: 'Comic Neue', cursive, sans-serif;
+  background-color: #f4eee1; 
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 20px auto;
   text-align: center;
+  background-color: #fdf6e3; 
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #6d4c41; 
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #8d6e63; 
+  margin-bottom: 20px;
+}
+
+button {
+  font-family: inherit;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  background-color: #a1887f; 
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #6d4c41; 
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 8px;
+  grid-template-columns: repeat(6, 80px);
+  gap: 10px;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .square {
-  width: 80%;
+  width: 80px;
   height: 80px;
   object-fit: cover;
-  cursor: pointer;
-  border-radius: 8px;
+  border: 2px solid #bcaaa4; 
+  border-radius: 12px;
   transition: transform 0.2s ease;
-  border: 2px solid black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbe9e7;
 }
 
 .square:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
+.number {
+  background-color: #d7ccc8; 
+  font-size: 20px;
+  font-weight: bold;
+  color: #4e342e;
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.5);
+}
 
+.scoreboard-container {
+  border: 2px dashed #bcaaa4;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: #f5f0ec;
+}
 
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.scoreboard h3 {
+  margin-bottom: 8px;
+  color: #6d4c41;
+}
+
+.scoreboard .active {
+  font-weight: bold;
+  color: #5d4037;
+}
